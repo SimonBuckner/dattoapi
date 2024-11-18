@@ -86,8 +86,8 @@ type Snapshot struct {
 }
 
 type Backup struct {
-	Status       **string `json:"status*"`
-	ErrorMessage **string `json:"errorMessage*"`
+	Status       *string `json:"status*"`
+	ErrorMessage *string `json:"errorMessage*"`
 }
 
 type LocalVerification struct {
@@ -269,6 +269,7 @@ type BackupReportItem struct {
 	UsedBytes    int64                      `json:"usedBytes"`
 	RemoteIds    []BackupReportRemoteIdItem `json:"remoteIds"`
 }
+
 type SaasBackup struct {
 	Pagination Pagination         `json:"pagination"`
 	Items      []BackupReportItem `json:"items"`
